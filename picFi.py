@@ -24,18 +24,18 @@ def display(input,output):
 
 flag = True;
 while flag:
-    #take filter input from user
-    filter = int(input("Choose the Filter \n 1.Grey  2.Thresholding  3.Histogram Processing   4.Exit\n"));
+    #take oper input from user
+    oper = int(input("\nChoose the Operation \n 1.Grey  2.Thresholding  3.Histogram Equalization   4.Exit\n"));
     
     
     #Grey
-    if filter == 1:
+    if oper == 1:
         grey = greyImage(img)
         display(img,grey)
         
 
     #Thresholding
-    elif filter == 2:
+    elif oper == 2:
         grey = greyImage(img)
         threshVal = int(input("Enter Threshold Value: "))
 
@@ -45,7 +45,7 @@ while flag:
         display(grey,threshImg)
 
     #Histogram Equalization
-    elif filter == 3:
+    elif oper == 3:
         grey = greyImage(img)
         histEqu = cv.equalizeHist(grey)
         output = np.hstack((grey,histEqu));
@@ -54,9 +54,9 @@ while flag:
         cv.destroyAllWindows();
 
     #exit app
-    elif filter == 4:
+    elif oper == 4:
         flag=False;
-        
+
     else:
         print("Wrong Input")
 
