@@ -1,2 +1,2 @@
 # PicFi
-Edit Images with different filters
+Perform Different Image Processing Operations.
